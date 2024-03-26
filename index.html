@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="form-heading">Contact Us</h1>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="query">Your Query:</label>
+                    <textarea id="query" name="query" rows="4" required></textarea>
+                </div>
+                <div class="submitDiv">
+                    <button type="submit" class="submit-btn">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "3YF-GioYB9eN6t4fk",
+        });
+    })();
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
